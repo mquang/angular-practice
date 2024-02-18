@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { MoviesService } from '../../services/movies.service';
 
 @Component({
   selector: 'app-slider',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class SliderComponent {
 
+  constructor(private moviesService: MoviesService) {}
+
+
+  movies$ = this.moviesService.getPopularMovies();
+  
 }

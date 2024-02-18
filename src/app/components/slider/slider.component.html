@@ -1,21 +1,27 @@
-<div class="slider">
-    <div class="slide">
+<div class="slider" *ngIf="movies$ | async as movies">
+    <div class="slide" *ngFor="let movie of movies.results">
         <div class="slide-bg"><img src="" alt=""></div>
         <div class="slide-pane">
-            <h2 class="title">Slider title</h2>
-            <div class="meta">
-                <div class="rating">
-                    <i>star-icon</i>
-                    <span>8.9</span>
+            <h2 class="title">{{movie.original_title}}</h2>
+            <div class="meta mb-4">
+                <div class="rating mb-1"> <!-- mb-1 from PrimeFlex <=> margin-bottom: 0.25rem-->
+                    <i class="pi pi-star-fill"></i> <!-- pi pi-star-fill from PrimeNG > primeicons -->
+                    <span>{{movie.vote_average}}</span>
                     <span>/10</span>
                 </div>
-                <div class="votes">
-                    <i>vote-icon</i>
-                    <span>4433</span>
+                <div class="votes mb-1">
+                    <i class="pi pi-users"></i>
+                    <span>{{movie.vote_count}}</span>
                 </div>
-                <div class="release-date">20.06.2024</div>
+                <div class="release-date">
+                    <i class="pi pi-calendar"></i>
+                    <span>{{movie.release_date}}</span>
+                </div>
             </div>
-            <div class="description">some text will go here</div>
+            <div class="description">{{movie.overview}}</div>
         </div>
     </div>
 </div>    
+<pre>
+    {{movies$ | async | json}}
+</pre>
