@@ -1,6 +1,12 @@
+.slider {
+    position: relative;
+    height: 35rem;
+}
+
 .slider .slide {
     width: 100%;
-    position: relative;
+    height: 35rem;
+    position: absolute;
 }
 
 .slider .slide .slide-bg{
