@@ -1,3 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/primeflex/primeflex.css';
 @import '../node_modules/primeicons/primeicons.css';
+
+body {
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    background: #141414;
+}
+
+.container {
+    margin: 0.5rem;
+    padding: 0.5rem;
+}

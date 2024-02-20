@@ -1,0 +1,12 @@
+<a class="item" *ngIf="item">
+    <div class="item-rating">
+        <i class="pi pi-star"></i>
+        <span>{{item.vote_average}}/10</span>
+    </div>
+    <div class="item-image">
+        <img [src]="imageBaseUrl + 'w500' + item.poster_path" [alt]="item.title">
+    </div>
+    <div class="item-title">
+        {{item.original_title}}
+    </div>
+</a>

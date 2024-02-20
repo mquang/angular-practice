@@ -11,8 +11,25 @@ export class MoviesService {
 
   constructor(private http: HttpClient) { }
 
+  /*
   getPopularMovies() {
     return this.http.get<MoviesDTO>(
       `${this.apiBaseUrl}/movie/popular?api_key=${this.apiKey}`);
+  }
+
+  getUpcomingMovies() {
+    return this.http.get<MoviesDTO>(
+      `${this.apiBaseUrl}/movie/upcoming?api_key=${this.apiKey}`);
+  }
+
+  getTopRatedMovies() {
+    return this.http.get<MoviesDTO>(
+      `${this.apiBaseUrl}/movie/top_rated?api_key=${this.apiKey}`);
+  }
+  */
+
+  getMoviesByType(type: string) {
+    return this.http.get<MoviesDTO>(
+      `${this.apiBaseUrl}/movie/${type}?api_key=${this.apiKey}`);
   }
 }
