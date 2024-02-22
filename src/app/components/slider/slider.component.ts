@@ -36,7 +36,8 @@ export class SliderComponent implements OnInit {
     this.moviesService.getMoviesByType('popular')
     .subscribe(data => {
       this.movies = data;
-      this.totalCount = data.results.length;
+      // this.totalCount = data.results.length;
+      this.totalCount = data.length;
     })
   }
 

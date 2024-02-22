@@ -1,5 +1,6 @@
 <div class="slider" *ngIf="movies">
-    <ng-container *ngFor="let movie of movies.results; let movieIndex = index"> <!-- animation (here is @slideFade) can not apply to built-in Angular tags-->
+    <!-- <ng-container *ngFor="let movie of movies.results; let movieIndex = index"> --> <!-- animation (here is @slideFade) can not apply to built-in Angular tags-->
+    <ng-container *ngFor="let movie of movies; let movieIndex = index">
     <div class="slide" *ngIf="movieIndex === slideIndex" @slideFade>
         <div class="slide-bg">
             <!-- <img src="{{imageBaseUrl + 'w1280' + movie.backdrop_path}}" alt="{{movie.title}}"> -->
