@@ -1,0 +1,4 @@
+.p-tabview .p-tabview-nav { /*we're overriding the css of primeng component, this will not take any effects until setting ViewEncapsulation in the .ts file */
+    justify-content: center;
+}
+

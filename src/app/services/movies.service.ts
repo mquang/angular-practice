@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http'; //HttpClientModule is required
 import { Injectable } from '@angular/core';
-import { MoviesDTO } from '../types/movie';
+import { Movie, MoviesDTO } from '../types/movie';
 import { map } from 'rxjs';
 
 @Injectable({
@@ -33,6 +33,12 @@ export class MoviesService {
     return this.http.get<MoviesDTO>(
       `${this.apiBaseUrl}/movie/${type}?api_key=${this.apiKey}`) //return Observable<MoviesDTO> => use data.results in the template 
       .pipe(map(data => data.results.slice(0, nbrDispl))); //return Observable<Movie[]> => use data in the template 
+      ;
+  }
+
+  getMovieById(id: string) {
+    return this.http.get<Movie>(
+      `${this.apiBaseUrl}/movie/${id}?api_key=${this.apiKey}`);
       ;
   }
 }

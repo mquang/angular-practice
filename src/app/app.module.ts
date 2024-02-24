@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BannerComponent } from './components/banner/banner.component';
 import { ItemComponent } from './components/item/item.component';
+import { ShowDetailComponent } from './pages/show-detail/show-detail.component';
+import { TabViewModule } from 'primeng/tabview';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,15 @@ import { ItemComponent } from './components/item/item.component';
     MovieListComponent,
     SliderComponent,
     BannerComponent,
-    ItemComponent
+    ItemComponent,
+    ShowDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TabViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]
