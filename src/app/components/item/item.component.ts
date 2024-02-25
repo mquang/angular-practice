@@ -9,6 +9,7 @@ import { imagesBaseUrl } from '../../constants/images-sizes';
 })
 export class ItemComponent {
   @Input() item : Movie | null = null;
+  @Input() showType: 'tv' | 'movie' = 'movie';
 
   imageBaseUrl = imagesBaseUrl;
 }

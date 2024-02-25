@@ -2,3 +2,42 @@
     justify-content: center;
 }
 
+.poster {
+    max-width: 100%;
+}
+
+.stat {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.stat .label {
+    width: 150px;
+    font-weight: bold;
+}
+
+.value {
+    color: orange;
+}
+
+.actor {
+    padding: 10px;
+}
+
+.actor img {
+    width: 100%;
+}
+
+.actor div {
+    text-align: center;
+}
+
+.genres-links a {
+    padding: 5px;
+    background-color: red;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 1rem;
+}

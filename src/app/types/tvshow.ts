@@ -1,4 +1,4 @@
-import { Movie } from "./movie"
+import { Movie, MoviesDTO } from "./movie"
 
 export type TvShow = {
     id: number
@@ -32,3 +32,20 @@ export function mapToMovies(tvshows: TvShow[]): Movie[] {
         } //return all old fields of tvshow plus 2 mapping fields (title, original_title)
     });
 }
+
+export function mapToMovie(tvshow: TvShow): Movie {
+    return {
+      ...tvshow,
+      title: tvshow.name,
+      original_title: tvshow.original_name,
+    };
+  }
+
+export function mapToMoviesDTO(tvshowDto: TvShowsDTO): MoviesDTO {
+    return {
+      results: tvshowDto.results.map(mapToMovie),
+      total_pages: tvshowDto.total_pages,
+      total_results: tvshowDto.total_results,
+      page: tvshowDto.page,
+    };
+  }

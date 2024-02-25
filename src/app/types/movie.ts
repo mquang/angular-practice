@@ -11,6 +11,9 @@ export type Movie = {
     title: string
     vote_average: number
     vote_count: number
+    revenue?: number
+    runtime?: string
+    genres?: Genre[]
 }
 
 export type MoviesDTO = {
@@ -19,3 +22,12 @@ export type MoviesDTO = {
     total_pages: number
     total_results: number
 }
+
+export type Genre = {
+    id: string
+    name: string
+}
+
+export type GenresDTO = {
+    genres: Genre[];
+};
